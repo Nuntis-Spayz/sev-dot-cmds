@@ -1,6 +1,6 @@
 # .cal
 
-.cal - print the current months calemdar
+.cal - print the current months calendar
 
 ### Next Steps for the .cal-endar
 - Add -v and -ver parameters, to display calendar version
