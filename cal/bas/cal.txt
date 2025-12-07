@@ -1,0 +1,38 @@
+#program cal
+  10 REM ------------------
+  20 REM   QUICK CALENDAR
+  30 REM ------------ v.0.1
+  40  
+  50 REM SAVE "cal.bas"
+  60  
+  70 PRINT "QuickCalendar"
+  80 INPUT "  Year:";year
+  90 IF year<35 THEN year=year+2000
+ 100 IF year<100 THEN year=year+1900
+ 110 INPUT " Month:";month
+ 120 IF month<1 OR month>12 THEN GO TO %110
+ 130 @months
+ 140 DATA 31,"Jan",28,"Feb",31,"Mar",30,"Apr"
+ 150 DATA 31,"May",30,"Jun",31,"Jul",31,"Aug"
+ 160 DATA 30,"Sep",31,"Oct",30,"Nov",31,"Dec"
+ 170 RESTORE @months 
+ 180 FOR i=1 TO month
+ 190   READ days,mName$
+ 200 NEXT i
+ 210 PRINT 
+ 220 REM 1-Sun,2-Mon,3-Tue,4-Wen,5-Thu,6-Fri,7-Fri
+ 230 start =1
+ 240 PRINT 
+ 250 PRINT "-"*29
+ 260 PRINT " SUN MON TUE WED THU FRI SAT"
+ 270 PRINT "-"*29
+ 280 FOR I=1 TO DAYS+START-1
+ 290   IF I<START THEN PRINT "    "; : GO TO %240
+ 300   d= I-START+1
+ 310   k=2
+ 320   IF d<10 THEN k=3
+ 330   PRINT " "*k;d;
+ 340   IF I MOD 7=0 THEN PRINT 
+ 350 NEXT I
+ 360 PRINT 
+ 370 PRINT "-"*29
