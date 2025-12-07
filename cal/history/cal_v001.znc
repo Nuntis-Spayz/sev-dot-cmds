@@ -1,23 +1,12 @@
 // cal
 // ------------------------
-// v 0.0.2      06-Dec-2025
+// v 0.0.1      06-Dec-2025
 //          by nuntis/spayz
 // ------------------------
 make dot "/dot/cal";
 
 include "/zdev/io.znc";
 include "/zdev/datetime.znc";
-include "/zdev/string.znc";
-include "/zdev/strcontains.znc";
-
-void printVersion() {
-  puts("cal version v0.0.2");
-  putc(32);
-  puts("07-Dec-2025");
-  putc(13);
-  puts("Ian 'Nuntis/Spayz' Jukes");
-  putc(13);
-}
 
 void printShMonth(int month) {
   
@@ -74,61 +63,47 @@ int dayOfWeek(int year, int month) {
   return (d + 5) %7 ;
 }
 
-void printMonth(int y, int m) {
-  putc(13);
-  puts("----- ");
-  printnum(y);
-  puts("-");
-  printShMonth(m);
-  puts(" -----");
-  putc(13);
+int[6] dt;
+int r = getDateTime(dt);
 
-  puts("Su Mo Tu We Th Fr Sa");
-  putc(13);
-  puts("--------------------");
-  putc(13);
+int y = dt[0];
+int m = dt[1];
 
-  int day= -dayOfWeek(y,m);
-  byte days= daysInMonth(y, m);
+putc(13);
+puts("----- ");
+printnum(y);
+puts("-");
+printShMonth(m);
+puts(" -----");
+putc(13);
 
-  for(;day<=days;) {
-    for(int i=0; i<7; i=i+1) {
+puts("Su Mo Tu We Th Fr Sa");
+putc(13);
+puts("--------------------");
+putc(13);
 
-      if(day<=0) {
-        puts("   ");
-      } else {
-        if(day<=days) {
-          if(day<10) {
-            putc(32);
-          }
-          
-          printnum(day);
-          putc(32);
-        }
-      }
-      day=day+1;
+int day= -dayOfWeek(y,m);
+
+byte days= daysInMonth(y, m);
+
+for(;day<=days;) {
+ for(int i=0; i<7; i=i+1) {
+
+  if(day<=0) {
+    puts("   ");
+  } else {
+    if(day<10) {
+      putc(32);
     }
-    putc(13);
+    if(day<=days) {
+      printnum(day);
+      putc(32);
+    }
   }
-  puts("--------------------");
-  putc(13);
+  day=day+1;
+
+ }
+ putc(13);
 }
-
-void main()
-{
-
- if( (strcontains(args, "-v")==1) || (strcontains(args, "--version")==1))
- {
-   printVersion();
- } else {  
-    int[6] dt;
-    int r = getDateTime(dt);
-
-    int y = dt[0];
-    int m = dt[1];
-
-    printMonth(y, m);
-  }
-}
-
-main();
+puts("--------------------");
+putc(13);
