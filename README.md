@@ -2,4 +2,4 @@
 
 dot Commands for the ZX Spectrum Next
 
-.cal - print the curremt months calemdar
+.cal - print the current months calemdar
