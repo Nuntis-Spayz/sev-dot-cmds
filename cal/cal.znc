@@ -9,10 +9,6 @@ include "/zdev/io.znc";
 include "/zdev/datetime.znc";
 
 void printShMonth(int month) {
-  //if (month<10) {
-  //  putc(48);
-  //}
-  //printnum(month);
   
   if(month==1) {
     puts("Jan");
@@ -52,7 +48,7 @@ int daysInMonth(int year, int month) {
 }
 
 int dayOfWeek(int year, int month) {
-  // adjust month and year forb Zzeller Ccongruence
+  // adjust month and year for Zellers Congruence
   if(month <3) {
     month = month + 12;
     year = year -1;
@@ -61,7 +57,7 @@ int dayOfWeek(int year, int month) {
   int k =year % 100;
   int j= year / 100;
   
-  // zellers congruence formula
+  // Zellers congruence formula
   int d = (1 +(13 * (month+1))/5 + k + (k/4) + (j/4) - (2*j)) % 7;
 
   return (d + 5) %7 ;
@@ -72,7 +68,6 @@ int r = getDateTime(dt);
 
 int y = dt[0];
 int m = dt[1];
-int d = dt[2];
 
 putc(13);
 puts("----- ");
