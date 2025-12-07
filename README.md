@@ -1,2 +1,5 @@
 # sev-dot-cmds
-dot Commands for te ZX Spectrum Next
+
+dot Commands for the ZX Spectrum Next
+
+.cal - print the curremt months calemdar
