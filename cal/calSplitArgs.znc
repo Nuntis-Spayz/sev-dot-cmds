@@ -1,0 +1,50 @@
+const byte MAX_PARAMS = 10;    // Maximum number of parameters
+
+//const byte MAX_PARAM_LEN = 20; // Maximum parameter length
+
+void splitArgs(
+        char *args,
+        char params[MAX_PARAMS],
+        int *paramCount
+    ) {
+    
+    int i = 0, j = 0, k = 0;
+
+    *paramCount = 0; // Initialize parameter count
+
+    while (args[i] != '\0' && *paramCount < MAX_PARAMS) {
+        // Skip leading spaces
+        while (args[i] == ' ') {
+            i++;
+        }
+
+        // Check if we reached the end
+        if (args[i] == '\0') {
+            break;
+        }
+
+        // Store parameter in the params array
+        k = 0; // Reset character counter for the current parameter
+        while (args[i] != ' ' && args[i] != '\0' && k < MAX_PARAM_LEN - 1) {
+            params[*paramCount][k++] = args[i++];
+        }
+        
+        params[*paramCount][k] = '\0'; // Null-terminate the current parameter
+        (*paramCount)++; // Increment parameter count
+    }
+}
+
+// int main() {
+//    const char *args = "command param1 param2 param3"; // Example input
+//    char params[MAX_PARAMS][MAX_PARAM_LEN];
+//    int paramCount, i;
+//
+//    splitArgs(args, params, &paramCount);
+//
+//    // Print the split parameters
+//    for (i = 0; i < paramCount; i++) {
+//       printf("Parameter %d: %s\n", i + 1, params[i]);
+//    }
+//
+//    return 0;
+//}

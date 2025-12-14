@@ -1,0 +1,41 @@
+
+void printMonth(int y, int m, byte offset) {
+  putc(13);
+  puts("----- ");
+  printnum(y);
+  puts("-");
+  puts(intToShMonth(m));
+  puts(" -----");
+  putc(13);
+
+  puts("Su Mo Tu We Th Fr Sa");
+  putc(13);
+  puts("--------------------");
+  putc(13);
+
+  int day= -dayOfWeek(y,m);
+  byte days= daysInMonth(y, m);
+
+  for(;day<=days;) {
+    for(int i=0; i<7; i=i+1) {
+
+      if(day<=0) {
+        puts("   ");
+      } else {
+        if(day<=days) {
+          if(day<10) {
+            putc(32);
+          }
+          
+          printnum(day);
+          putc(32);
+        }
+      }
+      day=day+1;
+    }
+    putc(13);
+  }
+  puts("--------------------");
+  //putc(13);
+}
+
