@@ -1,15 +1,16 @@
 # .cal
 
-### .cal v0.0.2 (07-Dec-2025)
+### .cal v0.0.3 (19-Dec-2025)
 
 .cal           -- print the current months calendar
+
+.cal yyyy mm   -- print the month calendar for year and month
 
 .cal -v
 .cal --version -- print the version of the app
 
 
 ### Next Steps for the .cal-endar Development
-- Add year and month parameters to display a different calendar
 - Add option to display 2/3 months across the display
 
 ## Requirements
@@ -22,8 +23,10 @@
 - datetime.znc
 - string.znc
 - strcontains.znc
+- strtoint.znc
 
 ### History
+v0.0.3 - 19-Dec-2025 - specify yyyy mm
 v0.0.2 - 07-Dec-2025 - added -v, --version
 v0.0.1 - 06-Dec-2025 - first version
 

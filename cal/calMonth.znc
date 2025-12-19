@@ -1,10 +1,65 @@
 
-void printMonth(int y, int m, byte offset) {
+void printShMonth(int month) {
+  
+  if(month==1) {
+    puts("Jan");
+  } else if(month==2) {
+    puts("Feb");
+  } else if(month==3) {
+    puts("Mar");
+  } else if(month==4) {
+    puts("Apr");
+  } else if(month==5) {
+    puts("May");
+  } else if(month==6) {
+    puts("Jun");
+  } else if(month==7) {
+    puts("Jul");
+  } else if(month==8) {
+    puts("Aug");
+  } else if(month==9) {
+    puts("Sep");
+  } else if(month==10) {
+    puts("Oct");
+  } else if(month==11) {
+    puts("Nov");
+  } else if(month==12) {
+    puts("Dec");
+  }  
+}
+
+int daysInMonth(int year, int month) {
+  if(month==2) {
+    return ( (year % 4)==0 && (year % 100)!=0) || ((year % 400)==0) ? 29 : 28;
+  } else if(month==4 || month==6 || month==9 || month==11) {
+    return 30;
+  } else {
+    return 31;
+  }
+}
+
+int dayOfWeek(int year, int month) {
+  // adjust month and year for Zeller's Congruence
+  if(month <3) {
+    month = month + 12;
+    year = year -1;
+  }
+  
+  int k =year % 100;
+  int j= year / 100;
+  
+  // Zeller's Congruence formula
+  int d = (1 +(13 * (month+1))/5 + k + (k/4) + (j/4) - (2*j)) % 7;
+
+  return (d + 5) %7 ;
+}
+
+void printMonth(int y, int m) {
   putc(13);
   puts("----- ");
   printnum(y);
   puts("-");
-  puts(intToShMonth(m));
+  printShMonth(m);
   puts(" -----");
   putc(13);
 
@@ -36,6 +91,5 @@ void printMonth(int y, int m, byte offset) {
     putc(13);
   }
   puts("--------------------");
-  //putc(13);
+  putc(13);
 }
-
