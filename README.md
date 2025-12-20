@@ -2,9 +2,8 @@
 
 dot Commands for the ZX Spectrum Next
 
-.cal - v0.0.3 - 19-Dec-2025
-     - print the calendar for a month
-     - includes -v or -version
+.cal - v0.0.4 - 20-Dec-2025
+     - print the calendar for a month or months
 
 ## Requirements
 - The znc compiler for ZX Spectrum Next https://taylorza.itch.io/znc-compiler
@@ -13,4 +12,4 @@ dot Commands for the ZX Spectrum Next
 Copyright 2025 Ian F Jukes / Nuntis / Spayz
 
 GNU Public Licence
-(C) 19-Dec-2025 Ian "Nuntis" Jukes
+(C) 20-Dec-2025 Ian "Nuntis" Jukes
