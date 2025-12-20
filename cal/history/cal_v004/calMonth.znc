@@ -87,7 +87,7 @@ void printMonth(int y, int m, byte cols, byte maxcols) {
   crTab(cols);
   
   int day= -dayOfWeek(y,m);
-  if(day<=-7) {
+  if(day<=-6) {
     day=day+7;
   }
   byte days= daysInMonth(y, m);

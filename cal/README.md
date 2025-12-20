@@ -9,15 +9,10 @@
 .cal -2        -- print 2 months across
 .cal -3        -- print 3 months across
 .cal -4        -- print 4 months across
-  ** when printing multiple months ensure you are in a text mode 
-     with extra character columns
+  ** when printing multiple months ensure you are in a text mode with extra character columns
 
 .cal -v
 .cal --version -- print the version of the app
-
-
-### Next Steps for the .cal-endar Development
-- Add option to display 2/3 months across the display
 
 ## Requirements
 - The znc compiler for ZX Spectrum Next https://taylorza.itch.io/znc-compiler
