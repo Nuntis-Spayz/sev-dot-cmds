@@ -36,7 +36,7 @@ could add hints to indicate whether the guess is too high or too low.
 #Utility Commands
 
 **.fortune** A command that picks a random fortune phrase from a set of 
-files saved on the SD card -- using the same format as used in linus 
+files saved on the SD card -- using the same format as used in Linux 
 fortune files, allowing the same fortune files to be used from the 
 fortune repository.
 
