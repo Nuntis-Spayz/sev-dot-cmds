@@ -1,0 +1,17 @@
+
+int nextParam(int pos, char* param) {
+    
+    while (args[pos]>0 && args[pos]<=32) {
+      pos = pos + 1;
+    }
+
+    int i = 0;    
+    while ( args[pos+i] > 32 ) {
+      param[i] = args[pos+i];
+      i=i+1;
+    }
+        
+    param[i] = 0; // Null-terminate the current parameter
+    
+    return pos+i;
+}
