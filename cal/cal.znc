@@ -1,6 +1,6 @@
 // cal
 // -----------------------
-// v 0.0.5     23-Dec-2025
+// v 0.0.6     02-Jan-2026
 //         by nuntis/spayz
 // -----------------------
 make dot "/dot/cal";
@@ -15,7 +15,7 @@ include "calMonth.znc";
 include "calNPara.znc";
 
 void printVersion() {
-  puts("cal version v0.0.5 23-Dec-2025");
+  puts("cal version v0.0.6 02-Jan-2026");
   putc(13);
 }
 
@@ -40,6 +40,7 @@ void main()
     int y = dt[0];
     int m = dt[1];
     byte flag=0;
+    byte maxUp=0;
     byte cols = 1;
     
     char* param = "           ";
@@ -62,8 +63,6 @@ void main()
           flag = flag + 1;
         }        
       }
-      // puts(param);
-      // putc(13);
           
       pos=nextParam(pos, param);
     }
@@ -88,6 +87,16 @@ void main()
         if(m>12) {
           m=m-12;
           y=y+1;
+        }
+        if(flag>maxUp) {
+          maxUp=flag;
+        }
+      } else {
+        flag++;
+        if(maxUp>flag) {
+          for(byte cr=flag; cr<maxUp; cr++){
+            putc(13);
+          }
         }
       }
     }

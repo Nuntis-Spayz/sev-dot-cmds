@@ -79,7 +79,8 @@ void printMonth(int y, int m, byte cols, byte maxcols) {
   
   puts("----- ");
   printnum(y);
-  puts("-");
+  //puts("-");
+  putc(32);
   printShMonth(m);
   puts(" -----");
   crTab(cols);
