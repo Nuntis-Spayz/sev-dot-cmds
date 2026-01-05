@@ -1,6 +1,6 @@
 // cal
 // -----------------------
-// v 0.0.6     02-Jan-2026
+// v 0.0.7     05-Jan-2026
 //         by nuntis/spayz
 // -----------------------
 make dot "/dot/cal";
@@ -15,7 +15,7 @@ include "calMonth.znc";
 include "calNPara.znc";
 
 void printVersion() {
-  puts("cal version v0.0.6 02-Jan-2026");
+  puts("cal version v0.0.7 05-Jan-2026");
   putc(13);
 }
 
@@ -24,6 +24,7 @@ void cUp(byte c) {
     putc(11);
   }
 }
+
 void main()
 {
 
@@ -92,7 +93,6 @@ void main()
           maxUp=flag;
         }
       } else {
-        flag++;
         if(maxUp>flag) {
           for(byte cr=flag; cr<maxUp; cr++){
             putc(13);

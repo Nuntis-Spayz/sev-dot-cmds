@@ -109,7 +109,9 @@ void printMonth(int y, int m, byte cols, byte maxcols) {
           }
           
           printnum(day);
-          putc(32);
+          if(i<6) {
+            putc(32);
+          }
         }
       }
       day=day+1;

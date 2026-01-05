@@ -1,6 +1,6 @@
 # .cal
 
-### .cal v0.0.6 (02-Jan-2026)
+### .cal v0.0.7 (05-Jan-2026)
 
 .cal           -- print the current months calendar
 
@@ -30,6 +30,7 @@
 - strtoint.znc
 
 ### History
+- v0.0.7 - 05-Jan-2026 - optimize layout (extra spaces)
 - v0.0.6 - 02-Jan-2026 - amends for ZNC 0.2f
 - v0.0.5 - 23-Dec-2025 - optimise code
 - v0.0.4 - 20-Dec-2025 - specify multiple months, -2, -3, -4

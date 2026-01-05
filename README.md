@@ -2,7 +2,7 @@
 
 dot Commands for the ZX Spectrum Next
 
-.cal - v0.0.6 - 02-Jan-2026
+.cal - v0.0.7 - 05-Jan-2026
      - print the calendar for a month or months
 
 ## Requirements
@@ -13,4 +13,4 @@ Copyright  2026 Ian F Jukes / Nuntis / Spayz
 
 GNU Public Licence
 
- 02-Jan-2026 Ian "Nuntis" Jukes
+ 05-Jan-2026 Ian "Nuntis" Jukes
