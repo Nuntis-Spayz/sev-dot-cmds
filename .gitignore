@@ -1,3 +1,6 @@
 *.nex
 *.bak
+._*
 dev/
+builds/sys
+fortune/
