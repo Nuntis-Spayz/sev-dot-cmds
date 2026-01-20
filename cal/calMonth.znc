@@ -67,7 +67,7 @@ void crTab(byte cols) {
   }
 }
 
-void printMonth(int y, int m, byte cols, byte maxcols) {
+int printMonth(int y, int m, byte cols, byte maxcols) {
   if(maxcols==4) {
    cols=cols*21;
   } else {
@@ -123,4 +123,5 @@ void printMonth(int y, int m, byte cols, byte maxcols) {
   putc(13);
   
   return lines;
+
 }
