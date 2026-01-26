@@ -7,12 +7,12 @@ make dot "/dot/cal";
 
 include "/zdev/io.znc";
 include "/zdev/datetime.znc";
+include "/zdev/nextparam.znc";
 include "/zdev/string.znc";
 include "/zdev/strcontains.znc";
 include "/zdev/strtoint.znc";
 
 include "calMonth.znc";
-include "calNPara.znc";
 
 void printVersion() {
   puts("cal version v0.0.7 05-Jan-2026");

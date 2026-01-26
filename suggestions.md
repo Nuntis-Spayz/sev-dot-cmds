@@ -1,6 +1,11 @@
 A list of possible suggestions for other commands that could be written 
 for the ZX Spectrum Next. No promises nor timeline.
 
+#File Uutilities
+
+**.fexists**: a tool for testing if a file or directory exists, returning
+the result into a specified integer variable
+
 #Calendar and Task Management
 
 **.todo**: Create a simple task manager where users can add, remove, and 

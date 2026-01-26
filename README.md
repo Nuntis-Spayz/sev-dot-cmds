@@ -9,8 +9,8 @@ dot Commands for the ZX Spectrum Next
 - The znc compiler for ZX Spectrum Next https://taylorza.itch.io/znc-compiler
 - Libraries from https://github.com/Nuntis-Spayz/sev-znc-libs
 
-Copyright  2026 Ian F Jukes / Nuntis / Spayz
+Copyright (C) 2026 Ian F Jukes / Nuntis / Spayz
 
 GNU Public Licence
 
- 05-Jan-2026 Ian "Nuntis" Jukes
+(C) 05-Jan-2026 Ian "Nuntis" Jukes

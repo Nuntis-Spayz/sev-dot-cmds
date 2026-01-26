@@ -25,6 +25,7 @@
 
 - io.znc
 - datetime.znc
+- nextparam.znc
 - string.znc
 - strcontains.znc
 - strtoint.znc
@@ -40,4 +41,4 @@
 
 GNU Public Licence
 
-Copyright  2026 Ian "Nuntis"  Jukes
+Copyright (C) 2026 Ian "Nuntis"  Jukes
