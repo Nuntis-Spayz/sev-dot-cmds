@@ -1,5 +1,6 @@
 *.nex
 *.bak
+*.code-workspace
 ._*
 dev/
 builds/sys
